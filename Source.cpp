@@ -3,7 +3,7 @@
 int main() {
     int start, end;
 
-    std::cout << "Enter the range (two numbers separated by space): ";
+    std::cout << "Enter two range limits (separated by space): ";
     std::cin >> start >> end;
 
     if (start > end) {
@@ -13,32 +13,35 @@ int main() {
     }
 
     std::cout << "All numbers in the range [" << start << ", " << end << "]:" << std::endl;
-    for (int i = start; i <= end; ++i) {
-        std::cout << i << " ";
+
+    int num = start;
+    while (num <= end) {
+        std::cout << num << " ";
+        ++num;
     }
     std::cout << std::endl;
 
     std::cout << "Even numbers in the range [" << start << ", " << end << "]:" << std::endl;
-    for (int i = start; i <= end; ++i) {
-        if (i % 2 == 0) {
-            std::cout << i << " ";
-        }
+    num = (start % 2 == 0) ? start : start + 1;
+    while (num <= end) {
+        std::cout << num << " ";
+        num += 2;
     }
     std::cout << std::endl;
 
     std::cout << "Odd numbers in the range [" << start << ", " << end << "]:" << std::endl;
-    for (int i = start; i <= end; ++i) {
-        if (i % 2 != 0) {
-            std::cout << i << " ";
-        }
+    num = (start % 2 != 0) ? start : start + 1;
+    while (num <= end) {
+        std::cout << num << " ";
+        num += 2;
     }
     std::cout << std::endl;
 
     std::cout << "Numbers divisible by seven in the range [" << start << ", " << end << "]:" << std::endl;
-    for (int i = start; i <= end; ++i) {
-        if (i % 7 == 0) {
-            std::cout << i << " ";
-        }
+    num = (start % 7 == 0) ? start : (start + (7 - start % 7));
+    while (num <= end) {
+        std::cout << num << " ";
+        num += 7;
     }
     std::cout << std::endl;
 
