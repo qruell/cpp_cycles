@@ -13,11 +13,13 @@ int main() {
         end = temp;
     }
 
-    for (int i = start; i <= end; ++i) {
-        sum += i;
+    int num = start;
+    while (num <= end) {
+        sum += num;
+        num++;
     }
 
-    std::cout << "Sum of all numbers in the range [" << start << ", " << end << "]: " << sum << std::endl;
+    std::cout << "Sum of numbers in the range [" << start << ", " << end << "]: " << sum << std::endl;
 
     return 0;
 }
