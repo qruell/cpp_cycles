@@ -5,9 +5,10 @@ int main() {
     std::cout << "Enter a number: ";
     std::cin >> number;
 
-    std::cout << "Integers from zero to " << number << ":" << std::endl;
-    for (int i = 0; i <= number; ++i) {
+    int i = 0;
+    while (i <= number) {
         std::cout << i << std::endl;
+        ++i;
     }
 
     return 0;
