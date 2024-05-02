@@ -8,8 +8,10 @@ int main() {
     std::cin >> y;
 
     int result = 1;
-    for (int i = 0; i < y; ++i) {
+    int exponent = y;
+    while (exponent != 0) {
         result *= x;
+        --exponent;
     }
 
     std::cout << x << " raised to the power of " << y << " = " << result << std::endl;
