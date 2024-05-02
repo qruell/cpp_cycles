@@ -2,8 +2,7 @@
 
 int main() {
     int a;
-
-    std::cout << "Enter the value of 'a' (1 <= a <= 20): ";
+    std::cout << "Enter a value for 'a' (1 <= a <= 20): ";
     std::cin >> a;
 
     if (a < 1 || a > 20) {
@@ -11,9 +10,11 @@ int main() {
         return 1;
     }
 
-    long long product = 1;
-    for (int i = a; i <= 20; ++i) {
-        product *= i;
+    int product = 1;
+    int current = a;
+    while (current <= 20) {
+        product *= current;
+        ++current;
     }
 
     std::cout << "Product of integers from " << a << " to 20: " << product << std::endl;
