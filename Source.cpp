@@ -1,16 +1,14 @@
 #include <iostream>
 
 int main() {
-    int a;
-    std::cout << "Enter value a: ";
-    std::cin >> a;
+    int number;
+    std::cout << "Enter a number: ";
+    std::cin >> number;
 
-    int sum = 0;
-    for (int i = a; i <= 500; ++i) {
-        sum += i;
+    std::cout << "Integers from zero to " << number << ":" << std::endl;
+    for (int i = 0; i <= number; ++i) {
+        std::cout << i << std::endl;
     }
-
-    std::cout << "Sum of integers from " << a << " to 500: " << sum << std::endl;
 
     return 0;
 }
