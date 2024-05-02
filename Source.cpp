@@ -4,9 +4,12 @@ int main() {
     int k;
     std::cout << "Enter the variant number: ";
     std::cin >> k;
-    std::cout << "Multiplication table for " << k << ":" << std::endl;
-    for (int i = 1; i <= 10; ++i) {
-        std::cout << k << " x " << i << " = " << k * i << std::endl;
+
+    int multiplier = 1;
+    while (multiplier <= 10) {
+        std::cout << k << " x " << multiplier << " = " << (k * multiplier) << std::endl;
+        ++multiplier;
     }
+
     return 0;
 }
