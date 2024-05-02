@@ -3,10 +3,12 @@
 int main() {
     int sum = 0;
     int count = 0;
+    int num = 1;
 
-    for (int i = 1; i <= 1000; ++i) {
-        sum += i;
-        count++;
+    while (num <= 1000) {
+        sum += num;
+        ++num;
+        ++count;
     }
 
     double mean = static_cast<double>(sum) / count;
